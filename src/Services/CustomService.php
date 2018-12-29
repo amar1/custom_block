@@ -19,7 +19,8 @@ class CustomService {
 
   public function getServiceData() {
     $query = \Drupal::entityQuery('node')
-    ->condition('status', 1);
+      ->condition('status', 1);
+
     $nids = $query->execute();
 
     $nodes = \Drupal::entityTypeManager()->getStorage('node')->loadMultiple($nids);
