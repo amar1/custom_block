@@ -22,8 +22,9 @@ class CustomBlock extends BlockBase {
     $service = \Drupal::service('custom_block.custom_services');
     $node_title = $service->getServiceData();
     return array(
-      '#type' => 'markup',
-      '#markup' => $node_title,
+      '#theme' => 'tcdev',
+      '#title' => 'Article Block',
+      '#description' => $node_title,
     );
   }
 
