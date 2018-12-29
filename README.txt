@@ -22,6 +22,9 @@ Reference Url
 ======================
 - https://drupal.stackexchange.com/questions/136139/how-to-render-a-template-in-drupal-8
 - https://drupal.stackexchange.com/questions/202909/pass-variable-to-custom-block-template-file
+- https://drupal.stackexchange.com/questions/171686/how-can-i-programmatically-display-a-block
+
+
 
 
 Note:-
@@ -30,3 +33,19 @@ Note:-
 3. Display only article content type using with query
 4. Display only 5 article using query.
 5. Code test with Drupal code sniffer.
+
+
+When we install custom module then we can enable block in content region i tried in .theme file of bartik but its not working. I think block id is not right so below code is not working.
+
+/**
+* Implements hook_preprocess_HOOK() for HTML document templates.
+*
+* Add block in a region.
+*/
+function bartik_block_preprocess_html(&$variables) {
+  $block = \Drupal\block\Entity\Block::load('block-customblock');
+  $block_content = \Drupal::entityManager()
+  ->getViewBuilder('block')
+  ->view($block);
+  $variables['page']['content'][] = $block_content;
+}
