@@ -1,2 +1,5 @@
-<h2>{{ title }} </h2>
-{{ description }}
+<ul>
+  {% for key, value in list  %}
+    <li>{{ value| raw }}</li>
+  {% endfor %}
+</ul>

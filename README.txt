@@ -23,6 +23,8 @@ Reference Url
 - https://drupal.stackexchange.com/questions/136139/how-to-render-a-template-in-drupal-8
 - https://drupal.stackexchange.com/questions/202909/pass-variable-to-custom-block-template-file
 - https://drupal.stackexchange.com/questions/171686/how-can-i-programmatically-display-a-block
+- https://www.deckfifty.com/blog/2017-01/drupal-8-l-function-creating-link
+- http://www.codeexpertz.com/blog/drupal/drupal-8-get-content-owner-or-author-name-node-using-node-id
 
 
 
@@ -49,3 +51,6 @@ function bartik_block_preprocess_html(&$variables) {
   ->view($block);
   $variables['page']['content'][] = $block_content;
 }
+
+
+

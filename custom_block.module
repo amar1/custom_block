@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Code for the Chad module.
+ * Code for the custom block module.
  */
 
 /**
@@ -17,6 +17,7 @@ function custom_block_theme($existing, $type, $theme, $path) {
         'variables' => array(
           'title' => 'Default title',
           'description' => NULL,
+          'list' => $node_title,
         ),
       ),
   );
